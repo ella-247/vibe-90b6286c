@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>뷰티 시술 룰렛 | Beauty Roulette</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app">
+    <section class="roulette-card">
+      <header class="header">
+        <button type="button" class="logo" id="homeButton" aria-label="처음으로 돌아가기">
+          <span>✦</span> BEAUTY ROULETTE
+        </button>
+
+        <div class="language-switch">
+          <button type="button" class="language-button active" data-language="ko">한국어</button>
+          <button type="button" class="language-button" data-language="ja">日本語</button>
+        </div>
+      </header>
+
+      <div class="progress">
+        <span class="progress-dot active"></span>
+        <span class="progress-line"></span>
+        <span class="progress-dot"></span>
+        <span class="progress-line"></span>
+        <span class="progress-dot"></span>
+      </div>
+
+      <section class="step active" id="concernStep">
+        <p class="eyebrow" id="welcomeText">WELCOME TO BEAUTY ROULETTE</p>
+        <h1 id="concernTitle">오늘의 피부 시술 룰렛을<br>돌려볼까요? ✨</h1>
+        <p class="guide-text" id="concernGuide">
+          먼저 가장 신경 쓰이는 피부 고민을<br>최대 2개 골라 주세요.
+        </p>
+
+        <div class="concern-grid" id="concernList"></div>
+        <p class="selection-count" id="selectionCount">0 / 2 선택됨</p>
+
+        <button type="button" class="main-button" id="nextButton" disabled>
+          다음으로 <span>→</span>
+        </button>
+      </section>
+
+      <section class="step" id="budgetStep">
+        <button type="button" class="back-button" id="concernBackButton">
+          ← <span id="concernBackText">이전</span>
+        </button>
+
+        <p class="eyebrow" id="budgetStepText">STEP 2</p>
+        <h1 id="budgetTitle">예상 예산을 골라 주세요</h1>
+        <p class="guide-text" id="budgetGuide">1인당 시술 예산 기준이에요.</p>
+
+        <div class="budget-list" id="budgetList"></div>
+
+        <button type="button" class="main-button" id="spinButton" disabled>
+          룰렛 돌리기 <span>🎡</span>
+        </button>
+      </section>
+
+      <section class="step result-step" id="resultStep">
+        <button type="button" class="back-button" id="budgetBackButton">
+          ← <span id="budgetBackText">이전</span>
+        </button>
+
+        <div class="wheel" id="wheel">🎡</div>
+        <p class="eyebrow" id="resultEyebrow">ROULETTE RESULT</p>
+        <h1 id="resultTitle">룰렛 결과</h1>
+
+        <div class="result-box">
+          <p class="loading-text" id="loadingText">룰렛을 돌리는 중이에요...</p>
+
+          <div class="result-content hidden" id="resultContent">
+            <h2 id="treatmentName"></h2>
+            <p class="treatment-price" id="treatmentPrice"></p>
+            <p class="treatment-description" id="treatmentDescription"></p>
+          </div>
+        </div>
+
+        <p class="price-notice hidden" id="priceNotice"></p>
+
+        <button type="button" class="again-button" id="againButton">
+          다시 돌리기 <span>↻</span>
+        </button>
+      </section>
+    </section>
+
+    <p class="footer-text" id="footerText">나에게 맞는 뷰티 이벤트를 가볍게 찾아보세요</p>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
